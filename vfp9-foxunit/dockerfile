@@ -1,6 +1,6 @@
 # escape=`
 ARG VFPTag=1809
-FROM vfp9:${VFPTag}
+FROM joelleach/vfp9:${VFPTag}
 
 COPY ["install", "C:\\install"]
 

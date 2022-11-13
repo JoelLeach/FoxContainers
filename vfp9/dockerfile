@@ -1,7 +1,7 @@
 # escape=`
 # VFP 9 installs on top of runtime since it includes VFP dependencies
 ARG VFPTag=1809
-FROM vfp9-runtime:${VFPTag}
+FROM joelleach/vfp9-runtime:${VFPTag}
 
 COPY ["install", "C:\\install"]
 

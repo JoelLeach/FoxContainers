@@ -2,10 +2,10 @@
 
 @echo Removing existing images...
 REM May fail if there are any child images. Can prune them later.
-powershell -Command docker rmi -f $(docker images 'vfp9-runtime-iis' -a -q)
-powershell -Command docker rmi -f $(docker images 'vfp9-foxunit' -a -q)
-powershell -Command docker rmi -f $(docker images 'vfp9' -a -q)
-powershell -Command docker rmi -f $(docker images 'vfp9-runtime' -a -q)
+powershell -Command docker rmi -f $(docker images 'joelleach/vfp9-runtime-iis' -a -q)
+powershell -Command docker rmi -f $(docker images 'joelleach/vfp9-foxunit' -a -q)
+powershell -Command docker rmi -f $(docker images 'joelleach/vfp9' -a -q)
+powershell -Command docker rmi -f $(docker images 'joelleach/vfp9-runtime' -a -q)
 
 @echo ------------------------------------------------
 @echo Building vfp9-runtime images...

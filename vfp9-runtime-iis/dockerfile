@@ -1,6 +1,6 @@
 # escape=`
 ARG VFPTag=1809
-FROM vfp9-runtime:${VFPTag}
+FROM joelleach/vfp9-runtime:${VFPTag}
 
 RUN powershell -Command `
         Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole; `
