@@ -1,0 +1,9 @@
+# escape=`
+# VFP 9 installs on top of runtime since it includes VFP dependencies
+ARG VFPTag=1809
+FROM vfp9-runtime:${VFPTag}
+
+COPY ["install", "C:\\install"]
+
+RUN C:\install\installvfp9.cmd & `
+    rd /S /Q C:\install

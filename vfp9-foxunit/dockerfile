@@ -1,0 +1,8 @@
+# escape=`
+ARG VFPTag=1809
+FROM vfp9:${VFPTag}
+
+COPY ["install", "C:\\install"]
+
+RUN C:\install\installfoxunit.cmd & `
+    rd /S /Q C:\install

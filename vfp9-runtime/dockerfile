@@ -1,0 +1,8 @@
+# escape=`
+ARG WinTag=windows:1809
+FROM mcr.microsoft.com/${WinTag}
+
+COPY ["install", "C:\\install"]
+
+RUN C:\install\installvfp9-runtime.cmd & `
+    rd /S /Q C:\install

@@ -1,0 +1,6 @@
+*.msi
+*.zip
+VFP9SP2RT.exe
+vfp9/install/Microsoft Visual FoxPro 9/*
+!vfp9/install/Microsoft Visual FoxPro 9/config.fpw
+!vfp9/install/Microsoft Visual FoxPro 9/README.md

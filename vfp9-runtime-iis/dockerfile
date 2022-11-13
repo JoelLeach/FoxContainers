@@ -1,0 +1,11 @@
+# escape=`
+ARG VFPTag=1809
+FROM vfp9-runtime:${VFPTag}
+
+RUN powershell -Command `
+        Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole; `
+        Invoke-WebRequest -UseBasicParsing -Uri "https://dotnetbinaries.blob.core.windows.net/servicemonitor/2.0.1.10/ServiceMonitor.exe" -OutFile "C:\ServiceMonitor.exe"
+
+EXPOSE 80
+
+ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]
